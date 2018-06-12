@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimpleValidationLibrary.Util
 {
-    class TextBlockErrorBindingCarrier : ErrorBindingCarrier
+    public class TextBlockErrorBindingCarrier : ErrorBindingCarrier
     {
         public TextBlockErrorBindingCarrier(TextBlock textBlock, string propertyName) : base(textBlock, propertyName) { }
         protected override void SetTargetValue(string errorMessage)
