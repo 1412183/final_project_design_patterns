@@ -25,7 +25,7 @@ namespace SimpleValidationLibrary.Util
 
             foreach (IObserver obj in listObservers)
             {
-                obj.Update(this);
+                obj.Update(obj);
             }
         }
     }
