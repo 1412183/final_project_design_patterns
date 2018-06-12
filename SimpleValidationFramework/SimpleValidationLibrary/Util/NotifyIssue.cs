@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleValidationLibrary.Util
 {
-    class NotifyIssue
+    public class NotifyIssue
     {
         private List<IObserver> listObservers = null;
 

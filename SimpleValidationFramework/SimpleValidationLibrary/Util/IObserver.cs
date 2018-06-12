@@ -8,7 +8,6 @@ namespace SimpleValidationLibrary.Util
 {
     public interface IObserver
     {
-        void Update(IObserver subject);
-        //void Update(NotifyIssue notifyIssue);
+        void Update(NotifyIssue notifyIssue);
     }
 }
