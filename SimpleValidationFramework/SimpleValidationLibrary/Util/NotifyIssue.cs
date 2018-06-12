@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleValidationLibrary.Util
 {
-    public class NotifyIssue
+    class NotifyIssue
     {
         private List<IObserver> listObservers = null;
 
@@ -25,7 +25,7 @@ namespace SimpleValidationLibrary.Util
 
             foreach (IObserver obj in listObservers)
             {
-                obj.Update(obj);
+                obj.Update(this);
             }
         }
     }

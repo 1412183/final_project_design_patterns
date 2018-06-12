@@ -38,20 +38,35 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\LengthValidatorAttribute.cs" />
-    <Compile Include="Attributes\NotEmptyValidatorAttribute.cs" />
+    <Compile Include="Attributes\CustomValidatorAttribute.cs" />
+    <Compile Include="Attributes\NestedValidatorAttribute.cs" />
     <Compile Include="Attributes\RegexValidatorAttribute.cs" />
     <Compile Include="Attributes\ValidatorAttribute.cs" />
+    <Compile Include="Interfaces\ICustomValidationRule.cs" />
+    <Compile Include="Primary\ValidatableBase.cs" />
+    <Compile Include="Primary\ValidationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\IObserver.cs" />
+    <Compile Include="Resources\DefaultErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultErrorMessages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Util\NotifyIssue.cs" />
-    <Compile Include="Validators\LengthValidator.cs" />
-    <Compile Include="Validators\NotEmptyValidator.cs" />
+    <Compile Include="Util\TextBlockErrorBindingCarrier.cs" />
+    <Compile Include="Validators\CustomValidator.cs" />
+    <Compile Include="Validators\NestedValidator.cs" />
     <Compile Include="Validators\RangeValidator.cs" />
     <Compile Include="Validators\RegexValidator.cs" />
     <Compile Include="Validators\Validator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DefaultErrorMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
