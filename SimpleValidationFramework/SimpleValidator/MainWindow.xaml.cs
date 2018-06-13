@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleValidationLibrary.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,10 +19,16 @@ namespace SimpleValidator
 {
     public partial class MainWindow : Window
     {
+        Model.User usermodel;
         public MainWindow()
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            this.usermodel = new Model.User();
+            usermodel.Address = new Model.Address();
+            this.RegisterForm.DataContext = usermodel;
+
+            PairErrorMessage();
         }
         
 
@@ -37,17 +44,22 @@ namespace SimpleValidator
 
         {
 
-            textBoxFirstName.Text = "";
+            FirstName.Text = "";
 
-            textBoxLastName.Text = "";
+            LastName.Text = "";
 
-            textBoxEmail.Text = "";
+            Email.Text = "";
+            Age.Password = "";
 
-            textBoxAddress.Text = "";
+            //Age.Text = "";
 
-            passwordBox1.Password = "";
+            Password.Text = "";
 
-            passwordBoxConfirm.Password = "";
+            PassworRetype.Text = "";
+
+            Province.Text = "";
+            City.Password = "";
+            Street.Text = "";
 
         }
 
@@ -63,8 +75,26 @@ namespace SimpleValidator
 
         {
 
-           
+            if (usermodel.IsValid)
+                MessageBox.Show("This user infomation is valid", "register Successfully");
 
+        }
+
+        private void PairErrorMessage()
+        {
+            List<TextBlockErrorBindingCarrier> list = new List<TextBlockErrorBindingCarrier>();
+            list.Add(new TextBlockErrorBindingCarrier(errorFirstName, "FirstName"));
+            list.Add(new TextBlockErrorBindingCarrier(errorLastName, "LastName"));
+            list.Add(new TextBlockErrorBindingCarrier(errorEmail, "Email"));
+            list.Add(new TextBlockErrorBindingCarrier(errorPassword, "Password"));
+
+            list.Add(new TextBlockErrorBindingCarrier(errorAge1, "Age"));
+            list.Add(new TextBlockErrorBindingCarrier(errorAddress, "Province"));
+
+            foreach (var notify in list)
+            { 
+                this.usermodel.Attach(notify);
+            }
         }
     }
 }

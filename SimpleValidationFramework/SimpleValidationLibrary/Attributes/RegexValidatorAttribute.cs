@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace SimpleValidationLibrary.Attributes
 {
-    class RegexValidatorAttribute : ValidatorAttribute
+    public class RegexValidatorAttribute : ValidatorAttribute
     {
         private string regex;
 

@@ -8,7 +8,7 @@ using SimpleValidationLibrary.Validators;
 
 namespace SimpleValidationLibrary.Attributes
 {
-    class NestedValidatorAttribute : ValidatorAttribute
+    public class NestedValidatorAttribute : ValidatorAttribute
     {
         public override Validator GetValidator(PropertyInfo propertyInfo)
         {

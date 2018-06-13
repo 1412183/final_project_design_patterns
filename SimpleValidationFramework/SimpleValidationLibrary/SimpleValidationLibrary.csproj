@@ -45,9 +45,7 @@
   <ItemGroup>
     <Compile Include="Attributes\CompareValidatorAttribute.cs" />
     <Compile Include="Attributes\CustomValidatorAttribute.cs" />
-    <Compile Include="Attributes\LengthValidatorAttribute.cs" />
     <Compile Include="Attributes\NestedValidatorAttribute.cs" />
-    <Compile Include="Attributes\NotEmptyValidatorAttribute.cs" />
     <Compile Include="Attributes\RangeValidatorAttribute.cs" />
     <Compile Include="Attributes\RegexValidatorAttribute.cs" />
     <Compile Include="Attributes\RequiredValidatorAttribute.cs" />
@@ -69,9 +67,11 @@
     <Compile Include="Util\TextBlockErrorBindingCarrier.cs" />
     <Compile Include="Validators\CompareValidator.cs" />
     <Compile Include="Validators\CustomValidator.cs" />
-    <Compile Include="Validators\LengthValidatorAttribute.cs" />
+    <Compile Include="Attributes\LengthValidatorAttribute.cs" />
+    <Compile Include="Validators\LengthValidator.cs" />
     <Compile Include="Validators\NestedValidator.cs" />
-    <Compile Include="Validators\NotEmptyValidatorAttribute.cs" />
+    <Compile Include="Attributes\NotEmptyValidatorAttribute.cs" />
+    <Compile Include="Validators\NotEmptyValidator.cs" />
     <Compile Include="Validators\RangeValidator.cs" />
     <Compile Include="Validators\RegexValidator.cs" />
     <Compile Include="Validators\RequiredValidator.cs" />

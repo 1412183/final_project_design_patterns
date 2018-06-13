@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimpleValidationLibrary.Validators
 {
-    class RangeValidator : Validator
+   public class RangeValidator : Validator
     {
         private object maxValue;
         private object minValue;

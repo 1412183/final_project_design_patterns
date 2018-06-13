@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimpleValidationLibrary.Validators
 {
-    class RegexValidator : Validator
+    public class RegexValidator : Validator
     {
         private string regex;
 
