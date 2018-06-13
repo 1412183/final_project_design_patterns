@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleValidation.Validators
+namespace SimpleValidationLibrary.Validators
 {
     class RangeValidator : Validator
     {

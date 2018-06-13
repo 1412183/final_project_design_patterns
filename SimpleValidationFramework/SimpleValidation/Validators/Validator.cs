@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleValidation.Validators
+namespace SimpleValidationLibrary.Validators
 {
     public abstract class Validator
     {
@@ -91,7 +91,7 @@ namespace SimpleValidation.Validators
                     return;
             }
 
-            throw new InvalidValidatorException(this.GetType(), propType);
+            throw new   InvalidValidatorException(this.GetType(), propType);
         }
 
     }
