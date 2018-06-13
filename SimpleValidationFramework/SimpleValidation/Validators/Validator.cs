@@ -15,7 +15,7 @@ namespace SimpleValidation.Validators
         protected Validator(string errorMessage, PropertyInfo propertyInfo)
         {
             if (string.IsNullOrEmpty(errorMessage))
-                this.errorMessage = string.Format(System.Resources.DefaultErrorMessages.Default, propertyInfo.Name);
+                this.errorMessage = string.Format(Resources.DefaultErrorMessages.Default, propertyInfo.Name);
             else
                 this.errorMessage = errorMessage;
 
