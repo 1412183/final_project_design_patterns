@@ -27,8 +27,7 @@ namespace SimpleValidator
             this.usermodel = new Model.User();
             usermodel.Address = new Model.Address();
             this.RegisterForm.DataContext = usermodel;
-
-            PairErrorMessage();
+            BindingErrorMessage();
         }
         
 
@@ -43,24 +42,11 @@ namespace SimpleValidator
         public void Reset()
 
         {
-
             FirstName.Text = "";
-
             LastName.Text = "";
-
             Email.Text = "";
-            Age.Password = "";
-
-            //Age.Text = "";
-
-            Password.Text = "";
-
-            PassworRetype.Text = "";
-
-            Province.Text = "";
-            City.Password = "";
-            Street.Text = "";
-
+            Age.Text = "";
+            Password.Password = "";
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
@@ -77,23 +63,21 @@ namespace SimpleValidator
 
             if (usermodel.IsValid)
                 MessageBox.Show("This user infomation is valid", "register Successfully");
+            else MessageBox.Show("This user infomation is invalid", "register Failed");
 
         }
 
-        private void PairErrorMessage()
+        private void BindingErrorMessage()
         {
             List<TextBlockErrorBindingCarrier> list = new List<TextBlockErrorBindingCarrier>();
             list.Add(new TextBlockErrorBindingCarrier(errorFirstName, "FirstName"));
             list.Add(new TextBlockErrorBindingCarrier(errorLastName, "LastName"));
             list.Add(new TextBlockErrorBindingCarrier(errorEmail, "Email"));
             list.Add(new TextBlockErrorBindingCarrier(errorPassword, "Password"));
-
-            list.Add(new TextBlockErrorBindingCarrier(errorAge1, "Age"));
-            list.Add(new TextBlockErrorBindingCarrier(errorAddress, "Province"));
-
-            foreach (var notify in list)
+            list.Add(new TextBlockErrorBindingCarrier(errorAge, "Age"));
+            foreach (var e in list)
             { 
-                this.usermodel.Attach(notify);
+                this.usermodel.Attach(e);
             }
         }
     }

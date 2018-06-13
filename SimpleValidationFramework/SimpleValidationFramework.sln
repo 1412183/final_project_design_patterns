@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFPDemo", "SimpleValidator\WFPDemo.csproj", "{F41B4197-68BC-479B-9CFF-C542D329F546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleValidation", "SimpleValidation\SimpleValidation.csproj", "{C460E622-11B0-4838-ADF3-B15C4C01EE55}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleValidationLibrary", "SimpleValidationLibrary\SimpleValidationLibrary.csproj", "{BF302E0F-0277-444C-A5A9-8F03C46A4B7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{EEC9A788-A43E-4E38-8894-67278DAB51CE}"
@@ -21,10 +19,6 @@ Global
 		{F41B4197-68BC-479B-9CFF-C542D329F546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F41B4197-68BC-479B-9CFF-C542D329F546}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F41B4197-68BC-479B-9CFF-C542D329F546}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C460E622-11B0-4838-ADF3-B15C4C01EE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C460E622-11B0-4838-ADF3-B15C4C01EE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C460E622-11B0-4838-ADF3-B15C4C01EE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C460E622-11B0-4838-ADF3-B15C4C01EE55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF302E0F-0277-444C-A5A9-8F03C46A4B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF302E0F-0277-444C-A5A9-8F03C46A4B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF302E0F-0277-444C-A5A9-8F03C46A4B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
