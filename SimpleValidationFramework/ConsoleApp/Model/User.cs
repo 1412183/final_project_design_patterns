@@ -22,7 +22,7 @@ namespace ConsoleApp.Model
 
         [SimpleValidationLibrary.Attributes.RequiredValidator()]
         //contain letters a-zA-Z and at least one digit 0-9
-       // [SimpleValidationLibrary.Attributes.RegexValidator(@"\\D")]
+       [SimpleValidationLibrary.Attributes.RegexValidator(@"\\D")]
         public string password { get; set; }
 
         //[SimpleValidationLibrary.Attributes.CompareValidator(SimpleValidationLibrary.Util.ComparableOperator.Equal,]
